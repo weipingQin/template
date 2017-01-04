@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="5"
+    name="Event"
+    minApi="9"
+    minBuildApi="14"
+    description="Creates a new  event model">
+
+    <category value="Tuya" />
+    <formfactor value="Mobile" />
+    
+    <parameter
+        id="modelName"
+        name="event class model name"
+        type="string"
+        default="Event"
+        help="The name of the event model class to create" />
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.tuyasmart.stencil.event" />
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_blank_activity.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
